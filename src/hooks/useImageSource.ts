@@ -1,16 +1,16 @@
-const hostname = import.meta.env.VITE_DOTCMS_HOST || "";
+const hostname = process.env.DOTCMS_HOST || ''
 
 export default function useImageSrc({
   identifier,
-  image,
+  image
 }: {
-  identifier: string;
-  image: string;
-  width?: string;
+  identifier: string
+  image: string
+  width?: string
 }) {
-  const imageSRC = identifier.includes("/dA/")
+  const imageSRC = identifier.includes('/dA/')
     ? identifier
-    : `/dA/${identifier}`; // Check if the image is a DotCMS asset or a file asset
+    : `/dA/${identifier}` // Check if the image is a DotCMS asset or a file asset
 
-  return `${hostname}${imageSRC}/${image}`;
+  return `${hostname}${imageSRC}/${image}`
 }
