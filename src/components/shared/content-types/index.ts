@@ -1,15 +1,15 @@
-import BlogListing from "components/shared/content-types/BlogListing";
-import BannerCarousel from "./BannerCarousel/BannerCarousel";
-import Activity from "./Activity";
-import Banner from "./Banner";
-import CallToAction from "./CallToAction";
-import CustomNoComponent from "./CustomNoComponent";
-import Image from "./ImageContentType";
-import VtlInclude from "./VtlInclude";
-import WebPageContent from "./WebPageContent";
-import Destination from "./Destination";
-import BlogListItem from "components/shared/content-types/Blogs/BlogListItem";
-import Blog from "./Blogs/Blog";
+import BlogListing from 'components/shared/content-types/BlogListing'
+import BannerCarousel from './BannerCarousel/BannerCarousel'
+import Activity from './Activity'
+import Banner from './Banner'
+import CallToAction from './CallToAction'
+import CustomNoComponent from './CustomNoComponent'
+import Image from './Image'
+import VtlInclude from './VtlInclude'
+import WebPageContent from './WebPageContent'
+import Destination from './Destination'
+import BlogListItem from 'components/shared/content-types/Blogs/BlogListItem'
+import Blog from './Blogs/Blog'
 
 export const componentMap = {
   CustomNoComponent: CustomNoComponent,
@@ -25,5 +25,5 @@ export const componentMap = {
   BlogListing: BlogListing,
   htmlpageasset: WebPageContent,
   blogContent: BlogListItem,
-  Blog,
-};
+  Blog
+}
