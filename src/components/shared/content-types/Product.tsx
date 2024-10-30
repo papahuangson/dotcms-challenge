@@ -3,7 +3,6 @@ import { DotCMSContentlet } from 'types'
 import { convertCurrencyToUSDFormat, formatCurrency } from 'utils/helpers'
 
 export default function Product({
-  identifier,
   image,
   title,
   salePrice,
@@ -16,7 +15,6 @@ export default function Product({
       role="button"
       aria-label={`View product details for ${title}`}
       onClick={() => navigate(url)}
-      key={identifier + image}
       title={title}
       className={`embla_slide w-max-60 group flex h-72 flex-col items-center justify-between rounded-lg border-0 border-b border-b-slate-100 shadow-lg first:ml-12 hover:border-blue-300 hover:shadow-gray-300`}
     >

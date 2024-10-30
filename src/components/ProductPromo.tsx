@@ -1,39 +1,39 @@
-import useEmblaCarousel from "embla-carousel-react";
-import { useContext, useEffect } from "react";
-import { ApiContext } from "utils/ApiContext";
+import useEmblaCarousel from 'embla-carousel-react'
+import { useContext, useEffect } from 'react'
+import { ApiContext } from 'utils/ApiContext'
 import {
   NextButton,
   PrevButton,
-  usePrevNextButtons,
-} from "./shared/content-types/BannerCarousel/CarouselArrowButtons";
-import Product from "./shared/content-types/Product";
+  usePrevNextButtons
+} from './shared/content-types/BannerCarousel/CarouselArrowButtons'
+import Product from './shared/content-types/Product'
 
 type Product = {
-  identifier: string;
-  image: string;
-  title: string;
-  retailPrice: string;
-  salePrice: string;
-};
+  identifier: string
+  image: string
+  title: string
+  retailPrice: string
+  salePrice: string
+}
 
 export default function ProductPromo() {
   const {
     fetchProducts,
-    products: { data },
-  } = useContext(ApiContext);
+    products: { data }
+  } = useContext(ApiContext)
 
   useEffect(() => {
-    fetchProducts();
-  }, []);
+    fetchProducts()
+  }, [])
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true })
 
   const {
     prevBtnDisabled,
     nextBtnDisabled,
     onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi);
+    onNextButtonClick
+  } = usePrevNextButtons(emblaApi)
 
   return (
     <section className="embla mt-8 border border-t-2 border-slate-100 pt-8">
@@ -43,8 +43,8 @@ export default function ProductPromo() {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container h-80 gap-4">
           {data !== null &&
-            data.map((product) => (
-              <Product key={product.identifier} {...product} />
+            data.map((product, index) => (
+              <Product key={product.identifier + index} {...product} />
             ))}
         </div>
       </div>
@@ -55,5 +55,5 @@ export default function ProductPromo() {
         </div>
       </div>
     </section>
-  );
+  )
 }

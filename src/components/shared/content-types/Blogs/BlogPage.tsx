@@ -120,7 +120,9 @@ export default function BlogPage(props: any) {
       <div
         className="flex h-80 flex-col justify-end"
         style={{
-          backgroundImage: `url(${process.env.DOTCMS_HOST}${props.image})`,
+          backgroundImage: `url(${process.env.DOTCMS_HOST}${
+            props.image?.includes('dA/') ? '' : '/dA/'
+          }${props.image}/1024maxw/80q/13ro/${props.title})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
