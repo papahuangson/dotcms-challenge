@@ -9,12 +9,6 @@ export default function MainNavigationItem({
   const navigate = useNavigate()
   const isHome = navItem.href === '/'
 
-  console.log(
-    location.pathname.includes(navItem.href),
-    location.pathname,
-    navItem.href
-  )
-
   return (
     <li
       key={navItem.hash}
