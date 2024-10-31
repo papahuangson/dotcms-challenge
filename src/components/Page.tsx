@@ -6,7 +6,7 @@ import { useLoaderData, useLocation } from 'react-router-dom'
 import { DotcmsNavigationItem, DotCMSPageAsset } from 'types'
 import NotFound from 'components/shared/NotFound'
 import ErrorDisplay from 'components/shared/ErrorDisplay'
-import BlogPage from './shared/content-types/Blogs/BlogPage'
+import UrlContentMapLayout from './UrlContentMap'
 
 export default function Page() {
   const loaderData = useLoaderData() as {
@@ -33,7 +33,7 @@ export default function Page() {
   const PageAssetLayout = () => (
     <div className="container mx-auto max-w-5xl bg-white">
       {pageAsset?.urlContentMap ? (
-        <BlogPage {...pageAsset?.urlContentMap} />
+        <UrlContentMapLayout {...pageAsset?.urlContentMap} />
       ) : (
         <DotcmsLayout
           pageContext={{

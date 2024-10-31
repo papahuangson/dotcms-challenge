@@ -2,7 +2,7 @@ import Product from 'components/shared/content-types/Product'
 import Tag from 'components/shared/Tag'
 import { useEffect } from 'react'
 
-export default function BlogPage(props: any) {
+export default function UrlContentMapLayout(props: any) {
   const renderContent = (content: any) => {
     return content?.map((block: any, index: number) => {
       switch (block.type) {
