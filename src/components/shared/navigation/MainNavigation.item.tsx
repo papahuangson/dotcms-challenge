@@ -9,6 +9,12 @@ export default function MainNavigationItem({
   const navigate = useNavigate()
   const isHome = navItem.href === '/'
 
+  console.log(
+    location.pathname.includes(navItem.href),
+    location.pathname,
+    navItem.href
+  )
+
   return (
     <li
       key={navItem.hash}
@@ -18,8 +24,10 @@ export default function MainNavigationItem({
       className={`cursor-pointer border-b-8 px-4 text-lg  hover:border-blue-200 ${
         (
           isHome
-            ? location.pathname === navItem.href
-            : location.pathname.includes(navItem.href)
+            ? location.pathname.toLowerCase() === navItem.href.toLowerCase()
+            : location.pathname
+                .toLowerCase()
+                .includes(navItem.href.toLowerCase())
         )
           ? 'border-b-sky-800'
           : 'border-b-white'
