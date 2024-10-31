@@ -6,7 +6,7 @@ import { useLoaderData, useLocation } from 'react-router-dom'
 import { DotcmsNavigationItem, DotCMSPageAsset } from 'types'
 import NotFound from 'components/shared/NotFound'
 import ErrorDisplay from 'components/shared/ErrorDisplay'
-import UrlContentMapLayout from './UrlContentMap'
+import UrlContentMapLayout from './UrlContentMapLayout'
 
 export default function Page() {
   const loaderData = useLoaderData() as {
