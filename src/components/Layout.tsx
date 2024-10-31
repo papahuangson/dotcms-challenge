@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
-import { Outlet } from "react-router-dom";
-import { ApiContext } from "utils/ApiContext";
-import MainNavigation from "./shared/navigation/MainNavigation";
-import ErrorDisplay from "./shared/ErrorDisplay";
-import ScrollToTop from "hooks/useScroll";
+import React, { useEffect } from 'react'
+import { Outlet } from 'react-router-dom'
+import { ApiContext } from 'utils/ApiContext'
+import MainNavigation from './shared/navigation/MainNavigation'
+import ErrorDisplay from './shared/ErrorDisplay'
+import ScrollToTop from 'hooks/useScroll'
 
 export default function Layout() {
-  const { appError, appReady, initApp } = React.useContext(ApiContext);
+  const { appError, appReady, initApp } = React.useContext(ApiContext)
 
   useEffect(() => {
-    initApp();
-  }, []);
+    initApp()
+  }, [])
 
   if (!appReady) {
-    return <></>;
+    return <></>
   }
 
   return appError ? (
@@ -39,5 +39,5 @@ export default function Layout() {
         </footer>
       </div>
     </>
-  );
+  )
 }

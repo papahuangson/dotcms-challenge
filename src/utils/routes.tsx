@@ -3,7 +3,7 @@ import { getPageData } from './dotcmsClient'
 
 import Layout from 'components/Layout'
 import Page from 'components/Page'
-// import BlogList from "components/BlogList";
+// import BlogList from 'components/BlogList'
 
 export const router = createBrowserRouter([
   {
@@ -11,10 +11,10 @@ export const router = createBrowserRouter([
     children: [
       // Fetch Blog via GraphQL
       // {
-      //   path: "blog",
+      //   path: 'blog',
       //   element: <BlogList />,
-      //   id: "blogs",
-      //   loader: async () => await fetchBlogs(),
+      //   id: 'blogs',
+      //   loader: async () => await fetchBlogs()
       // },
       {
         path: '*',

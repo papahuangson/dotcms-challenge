@@ -8,7 +8,6 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react(), tsconfigPaths()],
-    base: '/dotcms-challenge/',
     test: {
       globals: true,
       environment: 'happy-dom',

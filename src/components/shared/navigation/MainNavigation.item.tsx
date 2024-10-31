@@ -1,13 +1,13 @@
-import { useNavigate } from "react-router-dom";
-import { DotcmsNavigationItem } from "types";
+import { useNavigate } from 'react-router-dom'
+import { DotcmsNavigationItem } from 'types'
 
 export default function MainNavigationItem({
-  navItem,
+  navItem
 }: {
-  navItem: DotcmsNavigationItem;
+  navItem: DotcmsNavigationItem
 }) {
-  const navigate = useNavigate();
-  const isHome = navItem.href === "/";
+  const navigate = useNavigate()
+  const isHome = navItem.href === '/'
 
   return (
     <li
@@ -21,11 +21,11 @@ export default function MainNavigationItem({
             ? location.pathname === navItem.href
             : location.pathname.includes(navItem.href)
         )
-          ? "border-b-sky-800"
-          : "border-b-white"
+          ? 'border-b-sky-800'
+          : 'border-b-white'
       }`}
     >
-      {navItem.title || ""}
+      {navItem.title || ''}
     </li>
-  );
+  )
 }

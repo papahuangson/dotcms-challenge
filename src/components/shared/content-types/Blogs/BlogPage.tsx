@@ -111,7 +111,7 @@ export default function BlogPage(props: any) {
 
   useEffect(() => {
     if (document.title !== props.pageTitle) {
-      document.title = props.pageTitle
+      document.title = props.title
     }
   }, [props])
 
@@ -122,7 +122,7 @@ export default function BlogPage(props: any) {
         style={{
           backgroundImage: `url(${process.env.DOTCMS_HOST}${
             props.image?.includes('dA/') ? '' : '/dA/'
-          }${props.image}/1024maxw/80q/13ro/${props.title})`,
+          }${props.image}/1024maxw/80q/13ro)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}

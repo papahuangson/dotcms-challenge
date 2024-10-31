@@ -24,6 +24,7 @@ export const componentMap = {
   VtlInclude,
   BlogListing: BlogListing,
   htmlpageasset: WebPageContent,
+  SimpleWidget: WebPageContent,
   blogContent: BlogListItem,
   Blog
 }
